@@ -9,7 +9,12 @@ const Poem = require('./models/poem');
 // Connect to MongoDB
 const mongoUri = process.env.MONGODB_URI || 'your-default-mongodb-uri';
 console.log(mongoUri);
-mongoose.connect(mongoUri, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(mongoUri, {useNewUrlParser: true,
+    useUnifiedTopology: true,
+    tls: true,
+    tlsInsecure: false,
+    ssl: true,
+    sslValidate: true,});
 
 const db = mongoose.connection;
 
