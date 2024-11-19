@@ -13,8 +13,7 @@ mongoose.connect(mongoUri, {useNewUrlParser: true,
     useUnifiedTopology: true,
     tls: true,
     tlsInsecure: false,
-    ssl: true,
-    sslValidate: true,});
+    ssl: true,});
 
 const db = mongoose.connection;
 
